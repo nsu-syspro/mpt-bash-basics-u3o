@@ -1,9 +1,11 @@
 #!/bin/bash
 
+suff="$1"
 shift
+
 for f in "$@"; do
     if [ -e "$f" ]; then
-      tmpf="$f$1"
+      tmpf="$f$suff"
     fi
     mv "$f" "$tmpf"
 done
