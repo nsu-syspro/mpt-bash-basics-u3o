@@ -1,0 +1,9 @@
+#!/bin/bash
+
+shift
+for f in "$@"; do
+    if [ -e "$f" ]; then
+      tmpf="$f$1"
+    fi
+    mv "$f" "$tmpf"
+done
